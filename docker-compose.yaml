@@ -1,28 +1,29 @@
-# docker-compose.yml
-version: '3.8'
+version: "3.8"
 services:
   postgres:
     image: postgres:15
+    container_name: investport-postgresql
     environment:
       POSTGRES_DB: investment_portfolio
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: 123456
     ports:
-      - 5432:5432
+      - 5432:5432 # PostgreSQL default port
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
   redis:
     image: redis:7-alpine
+    container_name: investport-redis
     ports:
-      - 6379:6379
+      - 6379:6379 # Redis default port
 
   rabbitmq:
     image: rabbitmq:3-management
     container_name: investport-rabbitmq
     ports:
-      - 5672:5672
-      - 15672:15672
+      - 5672:5672 # RabbitMQ AMQP protocol
+      - 15672:15672 # RabbitMQ Management UI
     environment:
       RABBITMQ_DEFAULT_USER: admin
       RABBITMQ_DEFAULT_PASS: 123456
