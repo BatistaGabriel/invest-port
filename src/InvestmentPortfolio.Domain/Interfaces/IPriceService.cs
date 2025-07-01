@@ -1,4 +1,4 @@
-﻿namespace InvestmentPortfolio.Domain;
+﻿namespace InvestmentPortfolio.Domain.Interfaces;
 
 public interface IPriceService
 {

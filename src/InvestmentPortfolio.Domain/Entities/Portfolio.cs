@@ -1,4 +1,4 @@
-﻿namespace InvestmentPortfolio.Domain;
+﻿namespace InvestmentPortfolio.Domain.Entities;
 
 public class Portfolio
 {

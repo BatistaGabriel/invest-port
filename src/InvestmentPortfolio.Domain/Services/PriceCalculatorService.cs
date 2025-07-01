@@ -1,4 +1,4 @@
-﻿namespace InvestmentPortfolio.Domain;
+﻿namespace InvestmentPortfolio.Domain.Services;
 
 public class PriceCalculatorService
 {
