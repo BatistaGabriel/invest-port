@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "x7J45wbXEW+gIw6iA3GRhBJ/JhWAhOxXDXzC4kBxKjT98f2W7EyKHJDVCo8/SY1NRn5rmkVoeZF45mnxRgw/Ug==",
+  "success": true,
+  "projectFilePath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Application/InvestmentPortfolio.Application.csproj",
+  "expectedPackageFiles": [
+    "/home/gah-bree-0x4C/.nuget/packages/mediatr/12.5.0/mediatr.12.5.0.nupkg.sha512",
+    "/home/gah-bree-0x4C/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/gah-bree-0x4C/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

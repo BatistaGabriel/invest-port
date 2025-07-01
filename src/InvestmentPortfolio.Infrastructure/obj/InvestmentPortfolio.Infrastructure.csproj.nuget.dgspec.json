@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Infrastructure/InvestmentPortfolio.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Application/InvestmentPortfolio.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Application/InvestmentPortfolio.Application.csproj",
+        "projectName": "InvestmentPortfolio.Application",
+        "projectPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Application/InvestmentPortfolio.Application.csproj",
+        "packagesPath": "/home/gah-bree-0x4C/.nuget/packages/",
+        "outputPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/gah-bree-0x4C/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/InvestmentPortfolio.Domain.csproj": {
+                "projectPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/InvestmentPortfolio.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/InvestmentPortfolio.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/InvestmentPortfolio.Domain.csproj",
+        "projectName": "InvestmentPortfolio.Domain",
+        "projectPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/InvestmentPortfolio.Domain.csproj",
+        "packagesPath": "/home/gah-bree-0x4C/.nuget/packages/",
+        "outputPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/gah-bree-0x4C/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Infrastructure/InvestmentPortfolio.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Infrastructure/InvestmentPortfolio.Infrastructure.csproj",
+        "projectName": "InvestmentPortfolio.Infrastructure",
+        "projectPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Infrastructure/InvestmentPortfolio.Infrastructure.csproj",
+        "packagesPath": "/home/gah-bree-0x4C/.nuget/packages/",
+        "outputPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/gah-bree-0x4C/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Application/InvestmentPortfolio.Application.csproj": {
+                "projectPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Application/InvestmentPortfolio.Application.csproj"
+              },
+              "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/InvestmentPortfolio.Domain.csproj": {
+                "projectPath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Domain/InvestmentPortfolio.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.41, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
