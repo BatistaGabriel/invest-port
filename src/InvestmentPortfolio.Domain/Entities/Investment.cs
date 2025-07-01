@@ -1,6 +1,6 @@
 ﻿namespace InvestmentPortfolio.Domain;
 
-public class Class1
+public class Investment
 {
 
 }

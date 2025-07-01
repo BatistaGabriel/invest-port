@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "EUzVQ5boCwYxilIUM4tpurDNmi534NRHDKF27BDsVjFLQ65/RGMgWGj36XtC+xyWyX2TpYStPKOl596M9AdJGw==",
+  "dgSpecHash": "DCBwPyXQfWE1cH0vLMfo2aniABaxOa7Bf9VIXKJGKGirpfbBmxjNv7vOv6l3+u0P8sbtYtE4SsKzURhzbtTg+g==",
   "success": true,
   "projectFilePath": "/home/gah-bree-0x4C/workspace/invest-port/src/InvestmentPortfolio.Infrastructure/InvestmentPortfolio.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/home/gah-bree-0x4C/.nuget/packages/mediatr/12.5.0/mediatr.12.5.0.nupkg.sha512",
+    "/home/gah-bree-0x4C/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/home/gah-bree-0x4C/.nuget/packages/microsoft.entityframeworkcore/9.0.1/microsoft.entityframeworkcore.9.0.1.nupkg.sha512",
     "/home/gah-bree-0x4C/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.1/microsoft.entityframeworkcore.abstractions.9.0.1.nupkg.sha512",
     "/home/gah-bree-0x4C/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.1/microsoft.entityframeworkcore.analyzers.9.0.1.nupkg.sha512",
