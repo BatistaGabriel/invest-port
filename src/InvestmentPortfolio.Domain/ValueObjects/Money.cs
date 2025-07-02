@@ -7,7 +7,7 @@
 /// <br /><br />It provides methods to create instances of Money, check if the amount is zero, and validate the amount and currency values.
 /// <br /><br />The class is immutable, meaning once an instance is created, its state cannot be changed.
 /// </summary>
-public class Money
+public class Money : IEquatable<Money>
 {
     /// <summary>
     /// Gets the amount of money.
@@ -22,7 +22,7 @@ public class Money
     /// <summary>
     /// Checks if the amount of money is zero.
     /// </summary>
-    public bool IsZero() => Amount == 0;
+    public bool IsZero => Amount == 0;
 
     private Money(decimal amount, string currency)
     {
@@ -61,10 +61,10 @@ public class Money
     }
 
     ///<summary>
-    /// Factory method Creates a new instance of Money with the specified amount and currency.
-    /// <param name="amount">The amount of money, must be non-negative and have at most two decimal places.</param>
-    /// <param name="currency">The currency of the money, must be "BRL".</param>
-    /// <returns>A new instance of Money.</returns>
+    /// Factory method Creates a new instance of Money with the specified amount and currency. <br />
+    /// <param name="amount"><br />The amount of money, must be non-negative and have at most two decimal places.</param>
+    /// <param name="currency"><br />The currency of the money, must be "BRL".</param>
+    /// <returns><br />A new instance of Money.</returns>
     ///</summary>
     public static Money Create(decimal amount, string currency)
     {
@@ -81,5 +81,65 @@ public class Money
     public static Money Zero(string currency = "BRL")
     {
         return new Money(0, currency);
+    }
+
+    /// <summary>
+    /// Checks if the current instance is equal to another Money instance.
+    /// </summary>
+    public override bool Equals(object obj)
+    {
+        //Null check
+        if (obj is null) return false;
+
+        //Same reference check
+        if (ReferenceEquals(this, obj)) return true;
+
+        //Type check + delegate
+        return obj is Money other && Equals(other);
+    }
+
+    /// <summary>
+    /// Checks if the current instance is equal to another Money instance.
+    /// <br />This method is used to compare two Money instances for equality based on their Amount and Currency
+    /// </summary>
+    public bool Equals(Money other)
+    {
+        //Null check
+        if (other is null) return false;
+
+        //Same reference check
+        if (ReferenceEquals(this, other)) return true;
+
+        //Value comparison
+        return Amount == other.Amount && Currency == other.Currency;
+    }
+
+    /// <summary>
+    /// Generates a hash code for the current instance.
+    /// </summary>
+    public override int GetHashCode()
+    {
+        //Using a tuple to generate a hash code based on Amount and Currency
+        return HashCode.Combine(Amount, Currency);
+    }
+
+    /// <summary>
+    /// Overloaded operator == to check if two Money instances are equal.
+    /// </summary>
+    public static bool operator ==(Money left, Money right)
+    {
+        //Handle nulls
+        if (left is null && right is null) return true;
+        if (left is null || right is null) return false;
+
+        return left.Equals(right);
+    }
+
+    /// <summary>
+    /// Overloaded operator != to check if two Money instances are not equal.
+    /// </summary>
+    public static bool operator !=(Money left, Money right)
+    {
+        return !(left == right);
     }
 }
