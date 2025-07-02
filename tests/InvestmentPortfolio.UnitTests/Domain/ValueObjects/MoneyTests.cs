@@ -85,7 +85,7 @@ public class MoneyTests
         money1.Equals(money2).Should().BeFalse();
     }
 
-    [Fact (Skip = "Test skipped due to currency validation logic")]
+    [Fact(Skip = "Test skipped due to currency validation logic")]
     public void Should_Not_Be_Equal_When_Different_Currency()
     {
         //Arrange
@@ -142,5 +142,88 @@ public class MoneyTests
 
         //Assert
         money1.GetHashCode().Should().NotBe(money2.GetHashCode());
+    }
+
+    [Fact]
+    public void Should_Add_Money_With_Same_Currency()
+    {
+        //Arrange
+        var money1 = Money.Create(100.50m, "BRL");
+        var money2 = Money.Create(50.25m, "BRL");
+
+        //Act
+        var result = money1.Add(money2);
+
+        //Assert
+        result.Amount.Should().Be(150.75m);
+        result.Currency.Should().Be("BRL");
+    }
+
+    [Fact]
+    public void Should_Throw_When_Adding_Null()
+    {
+        //Arrange
+        var money = Money.Create(100.50m, "BRL");
+
+        //Act & Assert
+        Action act = () => money.Add(null);
+        act.Should().Throw<ArgumentNullException>()
+            .WithMessage("Cannot add null Money. (Parameter 'other')");
+    }
+
+    [Fact]
+    public void Should_Subtract_Money_Successfully()
+    {
+        //Arrange
+        var money1 = Money.Create(100.50m, "BRL");
+        var money2 = Money.Create(50.25m, "BRL");
+
+        //Act
+        var result = money1.Subtract(money2);
+
+        //Assert
+        result.Amount.Should().Be(50.25m);
+        result.Currency.Should().Be("BRL");
+    }
+
+    [Fact]
+    public void Should_Throw_When_Subtraction_Results_Negative()
+    {
+        //Arrange
+        var money1 = Money.Create(50.25m, "BRL");
+        var money2 = Money.Create(100.50m, "BRL");
+
+        //Act & Assert
+        Action act = () => money1.Subtract(money2);
+        act.Should().Throw<InvalidOperationException>()
+            .WithMessage("Subtraction cannot result in a negative amount.");
+    }
+
+    [Fact]
+    public void Should_Multiply_By_Factor()
+    {
+        //Arrange
+        var money = Money.Create(100.50m, "BRL");
+        decimal factor = 2.0m;
+
+        //Act
+        var result = money.Multiply(factor);
+
+        //Assert
+        result.Amount.Should().Be(201.00m);
+    }
+
+    [Fact]
+    public void Should_Divide_By_Factor()
+    {
+        //Arrange
+        var money = Money.Create(100.50m, "BRL");
+        decimal factor = 2.0m;
+
+        //Act
+        var result = money.Divide(factor);
+
+        //Assert
+        result.Amount.Should().Be(50.25m);
     }
 }
